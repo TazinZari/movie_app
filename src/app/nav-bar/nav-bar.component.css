@@ -1,0 +1,11 @@
+.custom-tab-menu ::ng-deep .p-tabmenu-nav {
+  font-size: 20px;
+}
+
+.custom-tab-menu ::ng-deep .p-tabmenuitem a {
+  padding: 15px 25px;
+}
+
+.custom-tab-menu ::ng-deep .p-tabmenuitem a.p-highlight {
+  font-size: 20px;
+}

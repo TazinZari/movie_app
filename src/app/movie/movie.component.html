@@ -1,0 +1,20 @@
+@if (movieDetails) {
+  <div class="movie-details-container container my-4">
+    <div class="card shadow-sm bg-light border-0">
+      <div class="card-body">
+        <h1 class="display-4 text-cyan-400">{{ movieDetails.movie }}</h1>
+        <a
+          [href]="movieDetails.imdb_url"
+          target="_blank"
+          class="btn btn-primary btn-sm"
+          >IMDB</a
+        >
+        <hr class="my-4" />
+        <p class="card-text text-muted">Rating: {{ movieDetails.rating }}</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button">Edit</a>
+        </p>
+      </div>
+    </div>
+  </div>
+}

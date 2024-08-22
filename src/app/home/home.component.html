@@ -1,0 +1,40 @@
+<div class="movie-grid-container container my-4">
+  <div class="my-2">
+    <label for="searchText" class="form-label text-dark">Search Movie</label>
+    <input
+      type="text"
+      class="form-control form-control-lg shadow-sm border-primary"
+      #searchText
+      placeholder="Search Movie.."
+      [(ngModel)]="value"
+      (ngModelChange)="changeMovieList(searchText.value)"
+    />
+  </div>
+
+  <div class="movie-grid">
+    <h2 class="text-cyan-400 my-4">Movie names</h2>
+    <div *ngIf="moviesList.length; else noMovies">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div *ngFor="let item of filertredList; let i = index" class="col">
+          <div class="card h-100 shadow-sm bg-light border-0">
+            <div class="card-body" [routerLink]="['/movie', item.id]">
+              <h5 class="card-title">{{ item.movie | titlecase }}</h5>
+              <p class="card-text text-muted">Rating: {{ item.rating }}</p>
+              <button
+                (click)="openImdbLink(item.imdb_url)"
+                class="btn btn-primary btn-sm"
+              >
+                IMDB
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-template #noMovies>
+      <p class="text-center text-muted">
+        Oops! No movies match your search. Please try again.
+      </p>
+    </ng-template>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+.app-container {
+  height: 100%; /* Full viewport height */
+}
+
+.main-content {
+  flex: 1;
+  padding: 1rem;
+  overflow: auto;
+}
+
+.nav-bar,
+.footer-bar {
+  background-color: #fefefe;
+  padding: 1rem;
+  text-align: center;
+}

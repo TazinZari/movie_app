@@ -1,0 +1,15 @@
+:root {
+  --card-min-height: 100px;
+  --card-body-min-height: 50px;
+}
+
+.card {
+  min-height: var(--card-min-height);
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-body {
+  min-height: var(--card-body-min-height);
+}
